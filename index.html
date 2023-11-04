@@ -5,77 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML course</title>
+
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        div {
+            height: 600px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- <p>This is p</p>
+    <a href="#one">Go to one</a>
+    <a href="#two">Go to two</a>
+    <br>
+    <button>OK</button>
 
-    <span>This is span</span>
-
-    <p>This is p</p>
-    
-    <span>This is span</span>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, praesentium laborum? Error debitis saepe nam
-        labore, pariatur magnam minima <span>voluptatum</span> tenetur consectetur dignissimos commodi quos molestias,
-        repudiandae facilis perferendis eius.</p>
+    <hr>
+    <!-- Computer code elements -->
+    <code>This is code</code> <br><br>
+    <kbd>This is code</kbd><br><br>
+    <samp>This is code</samp><br><br>
+    <pre>This                      is                 span</pre>
+    <var>This is variable</var>
 
     <hr>
 
-    <h1>This is H1</h1>
-    <h2>This is H2</h2>
-    <h3>This is H3</h3>
-    <h4>This is H4</h4>
-    <h5>This is H5</h5>
-    <h6>This is H6</h6>
-    <mohamed>This is new</mohamed> 
 
-    <img src="./images/nature.jpg" width="500" alt="This is nature image">
-    <blockquote>This is quotation</blockquote>
-
-    <a href="https://google.com">Go to google </a>
-    -->
-
-    <table border="">
-        <caption>Employees</caption>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th colspan="2">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Mohamed</td>
-                <td>27</td>
-                <td rowspan="2">Frontend developer</td>
-            </tr>
-            <tr>
-                <td>Ali</td>
-                <td>29</td>
-            </tr>
-        </tbody>
-    </table>
+    <div id="one">This is one</div>
+    <div id="two">This is two</div>
 
     <hr>
-    <strong>This is bold</strong> - 
-    <b>This is bold</b>
-    <br><br>
-    <i>This is italic</i> -
-    <em>This is emphasized (italic)</em>
-    <br><br>
-    <mark>This is marked</mark>
-    <br><br>
-    <ins>This is underline</ins>
-    <br><br>
-    <del>This is deleted</del> - 
-    <s>This is deleted</s>
-    <br><br>
-    <span>25 <sup>99</sup></span>
-    <br><br>
-    <span>25 <sub>99</sub></span>
-    <br><br>
-    <small>This is small</small>
+    <a href="https://www.google.com" target="_blank">Go to google</a> <br>
+    <a href="./images/nature.jpg" download>Download image</a> <br>
+    <a href="mailto:abc@senior.com">Send email</a> <br>
+    <a href="tel:123456789">Call someone</a> <br>
+    <a href="sms:123456789">Send sms</a> <br>
+    <a href="http://wa.me/123465789">Send whatsapp message</a> <br>
+
+    <hr>
+    <section>This is section</section>
+    <article>This is article</article>
+    <aside>This is a side</aside>
+    <nav>This is navigation bar</nav>
+    <footer>This is footer</footer>
+    <header>This is header</header>
+    <main>This is main</main>
+    <mark>This is mark</mark>
+
+    <details>
+        <summary>Click me!</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi exercitationem cum delectus numquam
+            recusandae corporis minima quidem repellat sed debitis, voluptatem hic magni illo, natus iure quas quisquam
+            earum.</p>
+    </details>
+
+    <figure>
+        <img src="./images/nature.jpg" width="300" alt="This is nature">
+        <figcaption>Nature Image</figcaption>
+    </figure>
+
+    <hr>
+
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+    <ul>
+        <li>Unordered list first item
+            <ul>
+                <li>OK</li>
+                <li>NO</li>
+            </ul>
+        </li>
+        <li>Unordered list second item</li>
+    </ul>
+
+    <hr>
+    <form method="GET">
+        <textarea cols="20" rows="5"></textarea> <br><br>
+        <select name="courses">
+            <optgroup label="Frontend">
+                <option value="html" >HTML</option>
+                <option value="css">CSS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option value="php">PHP</option>
+                <option value="sql">SQL</option>
+            </optgroup>
+        </select> <br><br>
+        <!--  -->
+        <label for="">Username</label>
+        <input type="text" maxlength="10" name="username" autocomplete="off" autofocus dirname="myDirection"
+            value="HTML course"> <br><br>
+        <input type="password" placeholder="Enter password" required> <br><br>
+        <input type="number" min="0" max="10" step="2"> <br><br>
+        <input type="text" placeholder="test for disabled" value="OK"> <br><br>
+        <input type="search" value="OK"> <br><br>
+        <input type="color"> <br><br>
+        <fieldset>
+            <legend>This is for time and date</legend>
+            <input type="time"> <br><br>
+            <input type="date" name="myDate" min="2023-11-03" max="2023-12-10"> <br><br>
+            <input type="month"> <br><br>
+            <input type="week"> <br><br>
+            <input type="datetime-local"> <br><br>
+        </fieldset>
+        <br><br>
+        <input type="email"> <br><br>
+        <input type="url"> <br><br>
+        <input type="range" min="0" max="10" step="2"> <br><br>
+        <input type="file" multiple accept=".txt"> <br><br>
+        <input type="hidden" name="timeNow" value="This is time now">
+        <br><br>
+        <input type="radio" name="gender" checked value="male" id="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label>
+        <br><br>
+        <input type="checkbox" name="courses" value="html" id="html">
+        <label for="html">HTML</label>
+        <br>
+        <input type="checkbox" name="courses" value="css" id="css">
+        <label for="css">CSS</label>
+        <br><br>
+        <input type="button" value="I am btn">
+        <input type="image" src="./images/nature.jpg" width="100" alt="This is image input">
+        <input type="reset" value="Reset">
+        <input type="submit" value="OK" formnovalidate formaction="./thanks.html" formtarget="blank">
+    </form>
+
+    <hr>
+
 </body>
 
 </html>
