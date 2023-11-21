@@ -4,144 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/nature.jpg">
     <title>HTML course</title>
 
     <style>
         body {
             height: 5000px;
         }
-
-        div {
-            height: 600px;
-        }
     </style>
+
 </head>
 
 <body>
-    <a href="#one">Go to one</a>
-    <a href="#two">Go to two</a>
-    <br>
-    <button>OK</button>
 
-    <hr>
-    <!-- Computer code elements -->
-    <code>This is code</code> <br><br>
-    <kbd>This is code</kbd><br><br>
-    <samp>This is code</samp><br><br>
-    <pre>This                      is                 span</pre>
-    <var>This is variable</var>
+    <progress max="10" value="7"></progress>
+    <meter max="10" value="7"></meter>
 
-    <hr>
+    <div>Mohamed <bdi>محمد</bdi> 55</div>
+
+    <dl>
+        <dt>Name: </dt>
+        <dd>This is details</dd>
+    </dl>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.827223590095!2d31.339829574648114!3d30.07048661733803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e0dd2418453%3A0x48a86997f284f8d6!2sSenior%20Steps!5e0!3m2!1sen!2seg!4v1700556885785!5m2!1sen!2seg"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oy-NicIgE?si=syLPo-4NcfeCTSI3"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
 
 
-    <div id="one">This is one</div>
-    <div id="two">This is two</div>
+    <audio src="audio/110.mp3" controls></audio>
 
-    <hr>
-    <a href="https://www.google.com" target="_blank">Go to google</a> <br>
-    <a href="./images/nature.jpg" download>Download image</a> <br>
-    <a href="mailto:abc@senior.com">Send email</a> <br>
-    <a href="tel:123456789">Call someone</a> <br>
-    <a href="sms:123456789">Send sms</a> <br>
-    <a href="http://wa.me/123465789">Send whatsapp message</a> <br>
+    <video src="./video/4 SECOND TIMER ⏲️.mp4" controls muted loop>
+        <source type="./images/nature.jpg">
+    </video>
 
-    <hr>
-    <section>This is section</section>
-    <article>This is article</article>
-    <aside>This is a side</aside>
-    <nav>This is navigation bar</nav>
-    <footer>This is footer</footer>
-    <header>This is header</header>
-    <main>This is main</main>
-    <mark>This is mark</mark>
+    <div>
+        <h3>This is test</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, officiis!</p>
+    </div>
 
-    <details>
-        <summary>Click me!</summary>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi exercitationem cum delectus numquam
-            recusandae corporis minima quidem repellat sed debitis, voluptatem hic magni illo, natus iure quas quisquam
-            earum.</p>
-    </details>
+    <h2>This is test two</h2>
 
-    <figure>
-        <img src="./images/nature.jpg" width="300" alt="This is nature">
-        <figcaption>Nature Image</figcaption>
-    </figure>
+    <span>Frontend course &reg;</span>
 
-    <hr>
 
-    <ol>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item</li>
-    </ol>
+    &lt;div&gt;This is division&lt;/div&gt;
 
-    <ul>
-        <li>Unordered list first item
-            <ul>
-                <li>OK</li>
-                <li>NO</li>
-            </ul>
-        </li>
-        <li>Unordered list second item</li>
-    </ul>
 
-    <hr>
-    <form method="GET">
-        <textarea cols="20" rows="5"></textarea> <br><br>
-        <select name="courses">
-            <optgroup label="Frontend">
-                <option value="html" >HTML</option>
-                <option value="css">CSS</option>
-            </optgroup>
-            <optgroup label="Backend">
-                <option value="php">PHP</option>
-                <option value="sql">SQL</option>
-            </optgroup>
-        </select> <br><br>
-        <!--  -->
-        <label for="">Username</label>
-        <input type="text" maxlength="10" name="username" autocomplete="off" autofocus dirname="myDirection"
-            value="HTML course"> <br><br>
-        <input type="password" placeholder="Enter password" required> <br><br>
-        <input type="number" min="0" max="10" step="2"> <br><br>
-        <input type="text" placeholder="test for disabled" value="OK"> <br><br>
-        <input type="search" value="OK"> <br><br>
-        <input type="color"> <br><br>
-        <fieldset>
-            <legend>This is for time and date</legend>
-            <input type="time"> <br><br>
-            <input type="date" name="myDate" min="2023-11-03" max="2023-12-10"> <br><br>
-            <input type="month"> <br><br>
-            <input type="week"> <br><br>
-            <input type="datetime-local"> <br><br>
-        </fieldset>
-        <br><br>
-        <input type="email"> <br><br>
-        <input type="url"> <br><br>
-        <input type="range" min="0" max="10" step="2"> <br><br>
-        <input type="file" multiple accept=".txt"> <br><br>
-        <input type="hidden" name="timeNow" value="This is time now">
-        <br><br>
-        <input type="radio" name="gender" checked value="male" id="male">
-        <label for="male">Male</label>
-        <br>
-        <input type="radio" name="gender" value="female" id="female">
-        <label for="female">Female</label>
-        <br><br>
-        <input type="checkbox" name="courses" value="html" id="html">
-        <label for="html">HTML</label>
-        <br>
-        <input type="checkbox" name="courses" value="css" id="css">
-        <label for="css">CSS</label>
-        <br><br>
-        <input type="button" value="I am btn">
-        <input type="image" src="./images/nature.jpg" width="100" alt="This is image input">
-        <input type="reset" value="Reset">
-        <input type="submit" value="OK" formnovalidate formaction="./thanks.html" formtarget="blank">
-    </form>
-
-    <hr>
-
+    &#165;
 </body>
 
 </html>
