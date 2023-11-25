@@ -1,45 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500&display=swap');
+:root {
+    --main_color: #00F
+}
 
 body {
-    height: 5000px;
-    font-family: 'Cairo', sans-serif;
+    height: 3000px;
 }
 
-section {
-    color: blue !important;
-    font-family: 'Ubuntu', sans-serif;
+* {
+    box-sizing: border-box;
+    color: var(--main_color)
 }
 
-.custom_class {
-    color: red;
+.custom_division,
+.custom_paragraph {
+    font-weight: bold;
+    background-color: var(--main_color);
+    color: #FFF
+}
+
+.bg_explain {
+    height: 500px;
+    background-image: linear-gradient(#5d5d5d87, #39393940), url(../images/nature.jpg);
+    /* background-image: url(../images/nature_sm.jpg); */
+    /* background-repeat: no-repeat; */
+    background-position: 14% 25%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gradient {
+    height: 300px;
+    width: 300px;
+    /* background: linear-gradient(#F00, #00F); */
+    /* background: repeating-linear-gradient(#F00, #00F 50%); */
+    /* background: radial-gradient(#F00, #00F); */
+    /* background: repeating-radial-gradient(#F00, #00F 50%); */
+    background: conic-gradient(#F00, #00F);
+
+}
+
+.border_explain {
+    height: 100px;
+    width: 100px;
+    /* border-color: #F00;
+    border-width: 15px;
+    border-style: solid; */
+    border: 15px solid #F00;
+}
+
+.radius {
     height: 200px;
     width: 200px;
-    background-color: blanchedalmond;
+    background-color: #080;
+    border-radius: 20px;
 }
 
-#custom_id {
-    color: #1aff00c3
-}
-
-/* 
-text : employeeemail
-
-camel case => employeeEmail
-snake case => employee_email
-kebab-case => employee-email
-pascal case => EmployeeEmail
-*/
-
-nav {
-    height: 70px;
-    background-color: darkorchid;
-}
-
-header {
-    height: calc(100vh - 70px);
-    width: 70vw;
-    background-color: #4e4e4e;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: bold;
+.space {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    margin-inline-start: 50px;
+    padding: 50px;
+    border: 10px solid;
 }
