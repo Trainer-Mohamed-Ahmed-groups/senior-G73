@@ -10,126 +10,93 @@ body {
     box-sizing: border-box;
 }
 
-.parent>.child {
-    color: red;
-    font-weight: bold;
-    font-size: 2rem;
-}
 
-.test+.child {
-    color: #00F
-}
-
-.test~.child {
-    background-color: #CCC;
-}
-
-.parentTwo :nth-child(even) {
-    font-weight: bold;
-    color: #FF0;
-    font-size: 2rem;
-}
-
-.item {
-    height: 400px;
-    background-color: #EEE;
-    margin: 20px;
-}
-
-:target {
-    font-size: 3rem;
-    color: #00F
-}
-
-p::first-letter {
-    font-size: 3rem;
-    color: #F00
-}
-
-p::first-line {
-    font-weight: bold;
-}
-
-p::selection {
+.position {
+    height: 100px;
+    width: 100px;
     background-color: #4e4e4e;
-    color: aqua
-}
-
-p::after {
-    content: "This is from CSS"
-}
-
-p::before {
-    content: "This is from CSS"
-}
-
-p span {
-    height: 44px;
-    width: 65px;
-    margin: 36px;
-    display: inline-block;
-}
-
-ol li {
-    /* list-style-type: disclosure-open;
-    list-style-position: inside; */
-    background: #939393;
-    list-style: persian inside;
-}
-
-ol li::marker {
-    color: #F00
-}
-
-.explain[senior] {
-    background-color: #CCC;
-}
-
-.explain[senior='seniorReact'] {
     font-weight: bold;
-    color: red
+    color: white;
+    font-size: 1.3rem;
 }
 
-.display_explain,
-.vis_explain {
-    height: 200px;
+.parent {
+    height: 300px;
+    width: 300px;
+    background-color: #4e4e;
+    position: relative;
+}
+
+.abs,
+.abs2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #F00
+}
+
+.abs2 {
+    bottom: 20px;
+    right: 20px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sticky {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.over {
     width: 200px;
-    background-color: #F00;
-    margin: 20px;
+    height: 200px;
+    background-color: #CCC;
+    overflow: auto;
 }
 
-table,
-th,
-td {
-    border: 2px solid #00F
+input {
+    outline: none;
 }
 
-table {
-    border-collapse: collapse;
-}
-
-.floatParent {
-    background-color: #080;
-}
-
-.floatParent  > div {
-    height: 70px;
-    width: 150px;
-    background-color: #999;
-    font-weight: bold;
-    color: #FFF;
+h1 {
     text-align: center;
-    line-height: 70px;
-    margin: 10px;
-    float: left;
 }
 
-.floatParent::after {
-    content: "";
-    clear: both;
-    display: block;
+a {
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-/* .clear {
-    clear: both
-} */
+p {
+    text-indent: 40px;
+    line-height: 40px;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+}
+
+th {
+    writing-mode: tb;
+}
+
+.transform {
+    height: 150px;
+    width: 150px;
+    background-color: chartreuse;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 150px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.transform:hover {
+    /* transform: rotateZ(45deg); */
+    /* transform: translateX(-100px) */
+    /* transform: scale(1.5) */
+    transform: skew(45deg)
+}
