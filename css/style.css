@@ -1,102 +1,175 @@
+* {
+    box-sizing: border-box
+}
+
 :root {
-    scroll-behavior: smooth;
+    --header_bg: #212934;
+    --header_font: #cfd6e1;
+    --brand: #59ab6e;
+    --font_color: #34383b;
+    --last: #1d242d;
+    --gold: #ede861;
+    --light: #c8d3de;
+    --intro_bg: #efefef;
+    --featured_bg: #e9eef5;
+    --white: #FFF
 }
 
 body {
     height: 5000px;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-
-.position {
-    height: 100px;
-    width: 100px;
-    background-color: #4e4e4e;
-    font-weight: bold;
-    color: white;
-    font-size: 1.3rem;
-}
-
 .parent {
+    height: 600px;
+    background-color: #00F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /*align-content: space-around; */
+}
+
+.child {
+    height: 120px;
+    width: 120px;
+    background-color: #F00;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 120px;
+    text-align: center;
+    border: 3px solid #080;
+    font-size: 3rem;
+}
+
+/* .child:first-child {
+    flex-basis: 200px;
+    flex: 1;
+    order: 3;
+}
+
+.child:nth-child(2) {
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-shrink: 10;
+    order: 1;
+}
+
+.child:nth-child(3) {
+    flex-grow: 5;
+    order: -1;
+} */
+
+.text {
+    font-size: 2rem;
+    text-shadow: -3px 3px 7px #F00;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: #3a3939;
+    margin: 50px;
+    transition: .4s;
+    /* box-shadow: 10px 10px 10px 8px aqua , -10px -10px 10px 8px rgb(40, 255, 43); */
+}
+
+.transition_example {
     height: 300px;
     width: 300px;
-    background-color: #4e4e;
+    background-color: #080;
+    margin: 50px;
+    /* transition-duration: 2.5s;
+    transition-property: width;
+    transition-timing-function: cubic-bezier(0.61, -1.39, 0, 2.13);
+    transition-delay: 2s; */
+    transition: 2s all ease-in-out 1s;
+}
+
+.transition_example:hover {
+    /* height: 500px; */
+    width: 500px;
+    /* text-align: center; */
+    background-color: #00F;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.box:hover {
+    box-shadow: 0px 0px 10px 8px aqua;
+}
+
+#div1 {
     position: relative;
-}
-
-.abs,
-.abs2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border: 1px solid #F00
-}
-
-.abs2 {
-    bottom: 20px;
-    right: 20px;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.sticky {
-    width: 100%;
-    position: sticky;
-    top: 0;
-}
-
-.over {
-    width: 200px;
     height: 200px;
-    background-color: #CCC;
-    overflow: auto;
+    width: 200px;
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid black;
 }
 
-input {
-    outline: none;
+#div1:hover #div2 {
+    transform: rotate(-45deg);
 }
 
-h1 {
-    text-align: center;
+.card {
+    height: 300px;
+    width: 190px;
+    position: relative;
+    color: #FFF;
+    font-size: 2rem;
+    backface-visibility: hidden;
+    transition: 2s all;
 }
 
-a {
-    text-decoration: none;
-    text-transform: uppercase;
+.card:hover {
+    transform: rotateY(180deg);
 }
 
-p {
-    text-indent: 40px;
-    line-height: 40px;
-    word-spacing: 10px;
-    letter-spacing: 10px;
+.front,
+.back {
+    position: absolute;
+    inset: 0;
 }
 
-th {
-    writing-mode: tb;
+.front {
+    background-color: #F00
 }
 
-.transform {
-    height: 150px;
-    width: 150px;
-    background-color: chartreuse;
-    margin: 40px auto;
-    text-align: center;
-    line-height: 150px;
+.back {
+    background-color: rgb(19, 188, 249);
+    transform: rotateY(180deg);
+}
+
+#div2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    transition: 1s all;
+    color: #FFF;
     font-weight: bold;
-    transition: 1s;
+    font-size: 1.5rem;
+    transform-origin: 100% 0%;
 }
 
-.transform:hover {
-    /* transform: rotateZ(45deg); */
-    /* transform: translateX(-100px) */
-    /* transform: scale(1.5) */
-    transform: skew(45deg)
+
+
+@media (max-width:600px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .child {
+        width: 100%;
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .child {
+        width: 50%;
+    }
 }
