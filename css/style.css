@@ -1,175 +1,213 @@
-* {
-    box-sizing: border-box
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --header_bg: #212934;
-    --header_font: #cfd6e1;
-    --brand: #59ab6e;
-    --font_color: #34383b;
-    --last: #1d242d;
-    --gold: #ede861;
-    --light: #c8d3de;
+    --header_color: #cfd6e1;
+    --main_color: #393c40;
     --intro_bg: #efefef;
-    --featured_bg: #e9eef5;
-    --white: #FFF
+    --brand_color: #59ab6e;
+    --active_star: #ede861;
+    --star: #bcbcbc;
+    --dark_section: #e9eef5;
+    --white_color: #FFF
 }
 
 body {
     height: 5000px;
 }
 
-.parent {
-    height: 600px;
-    background-color: #00F;
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+/*? ******************* Start global *******************************/
+.d_flex {
     display: flex;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.section_title,
+.section_desc {
+    text-align: center;
+    font-weight: 500;
+}
+
+.section_title {
+    font-size: 2rem;
+}
+
+
+/*? ******************* End global *******************************/
+
+
+
+/*? ******************* Start header *******************************/
+header {
+    background-color: var(--header_bg);
+    color: var(--header_color);
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: .8rem;
+}
+
+header .container {
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+}
+
+header .left {
+    gap: 15px
+}
+
+header .right i {
+    margin: 0 5px;
+}
+
+@media (max-width:550px) {
+    header .container {
+        flex-direction: column;
+    }
+}
+
+/*? ******************* End header *******************************/
+/*? ******************* Start nav *******************************/
+nav {
+    color: var(--main_color)
+}
+
+nav .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: capitalize;
+    transition: .5s all;
+}
+
+nav ul li:hover {
+    color: var(--brand_color);
+}
+
+nav .links {
+    gap: 20px;
+}
+
+nav .icons i {
+    margin-right: 10px;
+    position: relative;
+}
+
+nav .icons span.counter {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    background: #EEE;
+    padding: 3px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: .7rem;
+}
+
+@media (max-width:650px) {
+    :root {
+        font-size: 13px;
+    }
+
+    nav .container {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    nav .links {
+        margin-top: 0;
+    }
+
+    nav .logo {
+        width: 70px;
+    }
+}
+
+/*? ******************* End nav *******************************/
+/*? ******************* Start intro *******************************/
+.intro {
+    background-color: var(--intro_bg);
+    padding: 5rem 0;
+}
+
+.intro .container {
+    align-content: center
+}
+
+.intro .left {
+    flex: 1
+}
+
+.intro .left h1 {
+    font-weight: 200;
+}
+
+.intro img {
+    width: 350px;
+}
+
+@media (max-width:750px) {
+    .intro .container {
+        flex-direction: column;
+    }
+}
+
+/*? ******************* End intro *******************************/
+.products_container {
+    padding: 20px 0;
+    align-content: center;
     flex-wrap: wrap;
-    /*align-content: space-around; */
 }
 
-.child {
-    height: 120px;
-    width: 120px;
-    background-color: #F00;
-    color: #FFF;
-    font-weight: bold;
-    line-height: 120px;
+.products_container .product {
+    margin-bottom: 20px;
+    width: calc(100% / 3);
     text-align: center;
-    border: 3px solid #080;
-    font-size: 3rem;
 }
 
-/* .child:first-child {
-    flex-basis: 200px;
-    flex: 1;
-    order: 3;
+.products_container .product img {
+    max-width: 90%;
+    border-radius: 50%;
+    border: 2px solid var(--header_color)
 }
 
-.child:nth-child(2) {
-    align-self: flex-start;
-    flex-grow: 1;
-    flex-shrink: 10;
-    order: 1;
+.products_container .product button {
+    color: var(--white_color);
+    background-color: var(--brand_color);
+    outline: none;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.child:nth-child(3) {
-    flex-grow: 5;
-    order: -1;
-} */
-
-.text {
-    font-size: 2rem;
-    text-shadow: -3px 3px 7px #F00;
-}
-
-.box {
-    height: 200px;
-    width: 200px;
-    background-color: #3a3939;
-    margin: 50px;
-    transition: .4s;
-    /* box-shadow: 10px 10px 10px 8px aqua , -10px -10px 10px 8px rgb(40, 255, 43); */
-}
-
-.transition_example {
-    height: 300px;
-    width: 300px;
-    background-color: #080;
-    margin: 50px;
-    /* transition-duration: 2.5s;
-    transition-property: width;
-    transition-timing-function: cubic-bezier(0.61, -1.39, 0, 2.13);
-    transition-delay: 2s; */
-    transition: 2s all ease-in-out 1s;
-}
-
-.transition_example:hover {
-    /* height: 500px; */
-    width: 500px;
-    /* text-align: center; */
-    background-color: #00F;
-    font-size: 2rem;
-    color: #FFF;
-}
-
-.box:hover {
-    box-shadow: 0px 0px 10px 8px aqua;
-}
-
-#div1 {
-    position: relative;
-    height: 200px;
-    width: 200px;
-    margin: 100px;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-#div1:hover #div2 {
-    transform: rotate(-45deg);
-}
-
-.card {
-    height: 300px;
-    width: 190px;
-    position: relative;
-    color: #FFF;
-    font-size: 2rem;
-    backface-visibility: hidden;
-    transition: 2s all;
-}
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.front,
-.back {
-    position: absolute;
-    inset: 0;
-}
-
-.front {
-    background-color: #F00
-}
-
-.back {
-    background-color: rgb(19, 188, 249);
-    transform: rotateY(180deg);
-}
-
-#div2 {
-    padding: 50px;
-    position: absolute;
-    border: 1px solid black;
-    background-color: red;
-    transition: 1s all;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 1.5rem;
-    transform-origin: 100% 0%;
-}
-
-
-
-@media (max-width:600px) {
-    :root {
-        font-size: 8px;
-    }
-
-    .child {
-        width: 100%;
+@media (max-width:500px) {
+    .products_container {
+        flex-direction: column;
     }
 }
 
-@media (min-width:600px) and (max-width:1000px) {
-    :root {
-        font-size: 14px;
-    }
-
-    .child {
+@media (min-width:500px) and (max-width:900px) {
+    .products_container .product {
         width: 50%;
     }
 }
