@@ -1,0 +1,1 @@
+Create 4 functions that takes two parameters to make Subtraction, multiplication, division and addition 
