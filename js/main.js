@@ -1,122 +1,131 @@
-console.log("Hello Javascript")
+"use strict"
+// If condition
 
-var username = "Mohamed";
+var myGrade = 50;
 
-console.log(username)
-console.log("Hello : " + username)
-
-// This on line comment
-
-/* This 
-is 
-multi 
-lines 
-comment
-*/
-
-/*? Allowed
-_ A-Z a-z 1-9
-- $
-*/
-
-
-/*Not allowed
-- Start with number 
-- Spaces 
-- Kebab-case
-- reserved word
-- & * # @ % 
-*/
-
-/* Js is case senstive */
-
-/******************** Primitive data types ***********************/
-
-// String
-var str = "This is string"
-console.log(str)
-console.log(typeof str)
-
-console.log("*****************")
-// Number
-var num = 45;
-console.log(num)
-console.log(typeof num)
-console.log("*****************")
-
-// undefined
-var undef;
-console.log(undef);
-console.log(typeof undef)
-console.log("*****************")
-
-// null
-var nul = document.getElementById("test");
-console.log(nul);
-console.log(typeof nul)
-
-console.log("*****************")
-// Boolean 
-var boolTrue = true;
-console.log(boolTrue)
-console.log(typeof boolTrue)
-console.log("*****************")
-
-/******************** Non primitive data types ***********************/
-
-// array 
-var students = ["Ali", "Mohamed", "Khaled", "Omar", 8];
-
-console.log(students)
-console.log(students.length)
-console.log(students[2])
-console.log(students[5])
-console.log(typeof students)
-
-console.log("*****************")
-
-// Object
-
-var bird = {
-    name: "eagle",
-    price: 50,
-    numOfLegs: 2,
-    children: ["test", 'test2']
+if (myGrade === 500) {
+    console.log("OK")
+    if (5 > 4) console.log("Thank you")
+}
+else if (myGrade > 0) console.log(" GT 0")
+else {
+    console.log("Not OK");
 }
 
-// Property name (key) : value
-console.log(bird)
 
-// Bracket notation
-console.log(bird["name"])
 
-// Dot notation
-console.log(bird.numOfLegs)
+/* ? ************************************************** Operators *************************************/
 
-// Function
+/***********************! Arithmatic operators *****************/
+/**** Unary operators ****/
 
-// => void function
+var x = 5;
 
-function sayHello() {
-    console.log("Hello")
+console.log(x)
+
+
+
+console.log(++x)
+console.log(x++)
+console.log(x)
+console.log(--x)
+console.log(x--)
+
+/**** Binary operators ****/
+// + - * / 
+// %
+
+console.log(10 / 3)
+console.log(12 % 3)
+/***********************! Relational operators *****************/
+// > >= < <= 
+// == value
+// === value & data type
+
+console.log(5 == 5)
+console.log(5 != 5)
+
+
+console.log(5 === "5")
+console.log(5 !== "5")
+
+
+/***********************! Assignment operators *****************/
+// =
+// += -= *= /=
+var y = 4;
+console.log(y)
+y += 5;
+console.log(y)
+/***********************! Logical operators *****************/
+// && || !
+
+if (5 > 4 && 10 > 9) console.log("OK")
+else console.log("NO")
+
+
+if (5 > 4 || 10 > 90) console.log("OK")
+else console.log("NO")
+
+if (!false) console.log("NOOOOOOOO")
+
+/*********************************** Switch *********************************************/
+
+var t = 1;
+
+switch (t) {
+    case 1:
+        console.log("One")
+        break;
+    case 2:
+    case 3:
+        console.log("Two or Three")
+        break;
+    default:
+        console.log("Not above")
+        break;
 }
-var sayHello2 = function () {
-    console.log("Hello 2")
+
+/******************************************************* */
+
+// b = 7;
+
+// console.log(b)
+
+
+
+
+
+/********************************************** Loops ***********************************************/
+
+for (var i = 1; i <= 10; i++) {
+    console.log(i)
 }
 
-sayHello()
+for (var i = 10; i > 0; i--) {
+    console.log(i)
+}
 
-sayHello2()
 
+var persons = ["Mohamed", "Mahmoud", "Omar", "Ahmed", "Ali"];
+
+for (let index = 0; index < persons.length; index++) {
+    const element = persons[index];
+    console.log(element)
+}
+
+var o = 1
+while (o <= 5) {
+    console.log(o)
+    o++
+}
 
 console.log("*****************")
+var u = 1
+
+do {
+    console.log(u)
+    u++
+} while (u <= 5);
 
 
-// => Value returning function
-
-function addNumbers(a, b) {
-    return a + b
-}
-
-console.log(addNumbers(4, 5))
-console.log(addNumbers(34, 50))
