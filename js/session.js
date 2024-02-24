@@ -1,43 +1,20 @@
-function myFn() {
-    console.log("test")
-}
+var x = 99;
 
-// let firstInterval = setInterval(myFn, 500)
+console.log(x)
+console.log(x.toString())
+
+console.log(Number.MAX_SAFE_INTEGER); // The maximum safe positive integer that a JavaScript number
+console.log(Number.MIN_SAFE_INTEGER); // The maximum safe negative integer that a JavaScript number
+console.log(Number.MAX_VALUE);// The largest positive numeric value that JavaScript
+console.log(Number.MIN_VALUE);// The lowest positive numeric value that JavaScript
+console.log(Number.POSITIVE_INFINITY)  // It is a value greater than any other number
+console.log(Number.NEGATIVE_INFINITY)  // It is a value lower than any other number
 
 
-function stopMyInterval() {
-    clearInterval(firstInterval)
-}
 
-/***********************************************************/
+/********************************** */
 
-function myFn2() {
-    console.log("test")
-}
 
-let firstTimeout = setTimeout(myFn2, 5000)
+var my_date = new Date()
 
-function stopMyTimeout() {
-    clearTimeout(firstTimeout);
-}
-
-console.log("Hello")
-
-/************************************** Built in objects ***************************************/
-
-console.log(Math.max(45, 45, 48, 4, 51, 12))
-console.log(Math.min(45, 45, 48, 4, 51, 12))
-
-console.log(Math.round(3.3))
-console.log(Math.ceil(3.1))
-console.log(Math.floor(3.9))
-
-console.log(Math.pow(5, 3))
-console.log(Math.sqrt(25))
-console.log(Math.PI)
-console.log(Math.random() * 10); // returns a random number between 0 and 1 exclusive
-console.log(Math.round(Math.random() * 10));
-
-var employees = ["Ali", "Ibrahim", "Yasser", "Mohamed", "Omar"];
-
-console.log(employees[Math.floor(Math.random() * employees.length)])
+console.log(my_date)

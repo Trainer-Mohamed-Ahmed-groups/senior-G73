@@ -20,11 +20,31 @@
 </head>
 
 <body>
-    <button onclick="stopMyInterval()">Stop interval</button>
-    <button onclick="stopMyTimeout()">Stop timeout</button>
 
-    
-    <script src="./js/session.js"></script>
+    <div id="parent">
+        <div id="testId">I have a unique ID</div>
+        <div class="testClass">I am a division with class</div>
+        <div class="testClass">I am a division with class
+            <div class="client">
+                <span>I am span</span>
+                I am client
+            </div>
+        </div>
+        <div class="testClass">I am a division with class</div>
+        <div class="testClass">I am a division with class</div>
+
+        <!-- Comment -->
+        <input type="text" class="hello" name="education">
+        <input type="text" class="hello" name="education">
+        <input type="text" class="hello" name="education">
+        <input type="text" class="hello" name="education">
+        <input type="text" class="hello" name="education">
+        <input type="text" class="hello" name="education">
+    </div>
+
+
+    <!-- <script src="./js/session.js"></script> -->
+    <script src="./js/dom.js"></script>
 </body>
 
 </html>
